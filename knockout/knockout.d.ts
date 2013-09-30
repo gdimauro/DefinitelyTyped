@@ -403,6 +403,8 @@ interface KnockoutStatic {
     cleanNode(node: Element);
     renderTemplate(template: Function, viewModel: any, options?: any, target?: any, renderMode?: any);
     renderTemplate(template: string, viewModel: any, options?: any, target?: any, renderMode?: any);
+    unwrap<T>(value: KnockoutObservable<T>): T; //=DG= generic type inferred from observable parameter
+    unwrap<T>(value: KnockoutObservableArray<T>): T[]; //=DG= generic type inferred from observable array parameter
     unwrap(value: any): any;
 
     //////////////////////////////////
